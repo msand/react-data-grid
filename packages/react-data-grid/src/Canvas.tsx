@@ -55,6 +55,7 @@ export default function Canvas<R, K extends keyof R>({
   eventBus,
   getSubRowDetails,
   height,
+  header,
   interactionMasksMetaData,
   onCanvasKeydown,
   onCanvasKeyup,
@@ -244,6 +245,7 @@ export default function Canvas<R, K extends keyof R>({
         onKeyDown={onCanvasKeydown}
         onKeyUp={onCanvasKeyup}
       >
+        {header}
         <InteractionMasks<R, K>
           rowGetter={rowGetter}
           rowsCount={rowsCount}
